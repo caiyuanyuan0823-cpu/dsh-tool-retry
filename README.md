@@ -1,6 +1,16 @@
 # dsh-tool-retry
 
+[![npm](https://img.shields.io/npm/v/@caiyy0823/dsh-tool-retry)](https://www.npmjs.com/package/@caiyy0823/dsh-tool-retry)
+[![license](https://img.shields.io/npm/l/@caiyy0823/dsh-tool-retry)](LICENSE)
+[![dsh plugin](https://img.shields.io/badge/dsh-plugin-4b5563)](https://github.com/caiyuanyuan0823-cpu/dsh-tool-retry)
+
 **Tool-call retry policy for DeepSeek Harness.** DSH already retries model requests (`llm-retry`) and enforces per-tool deadlines (`timeout-policy`), but nothing retried a *tool call*. This plugin fills that hole at the `tools/execute` waterfall.
+
+装：
+
+```
+plugin_manager → install_bundle → target: @caiyy0823/dsh-tool-retry
+```
 
 只重试"被判定为瞬时失败、且操作幂等"的工具调用：抖动指数退避、拒绝清单永远优先、重试对会话日志透明，并写一份永不抛错的 JSONL 审计账本。
 

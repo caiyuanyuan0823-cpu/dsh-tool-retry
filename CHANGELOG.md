@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+- Package metadata: `repository`, `homepage`, `bugs` now point at the GitHub repo; author set to the publishing account. No behaviour change.
+- README: npm badge and a one-line install command.
+
 ## 1.1.0
 
 - **MCP coverage.** `retryToolPrefixes` (default `["mcp__"]`) makes every MCP-provided tool retryable without listing names; `retryTools` keeps handling exact names.

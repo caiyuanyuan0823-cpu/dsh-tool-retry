@@ -1,6 +1,6 @@
 {
   "name": "@caiyy0823/dsh-tool-retry",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tool-call retry policy for DeepSeek Harness: retries only classified-transient failures of idempotent tools (web + MCP by prefix), with jittered exponential backoff, deny rules that beat every allowlist, and a never-throwing JSONL audit ledger.",
   "type": "module",
   "exports": {
@@ -42,8 +42,16 @@
     "mcp",
     "tool-call"
   ],
-  "author": "cailv",
+  "author": "caiyy0823",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiyuanyuan0823-cpu/dsh-tool-retry.git"
+  },
+  "homepage": "https://github.com/caiyuanyuan0823-cpu/dsh-tool-retry#readme",
+  "bugs": {
+    "url": "https://github.com/caiyuanyuan0823-cpu/dsh-tool-retry/issues"
+  },
   "engines": {
     "node": ">=22.0.0"
   }
