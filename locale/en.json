@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Tool retry policy",
+    "description": "Retries a tool call only when its failure is classified transient and the tool is on an idempotent allowlist, with jittered exponential backoff, a never-retry list for cancellations and mutations, and a JSONL audit ledger.",
+    "detail": "docs/DETAIL.md"
+  }
+}

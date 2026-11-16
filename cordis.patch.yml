@@ -1,0 +1,6 @@
+# Bundle patch layer: one Host row wraps `tools/execute` with the retry policy.
+# Tunables belong in this row's `config`; omitted keys take the schema defaults,
+# so a later DSH upgrade can change a default without touching this file.
+- insert:
+    - id: tool-retry-policy
+      name: '@caiyy0823/dsh-tool-retry'

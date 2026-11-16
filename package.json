@@ -1,0 +1,50 @@
+{
+  "name": "@caiyy0823/dsh-tool-retry",
+  "version": "1.1.0",
+  "description": "Tool-call retry policy for DeepSeek Harness: retries only classified-transient failures of idempotent tools (web + MCP by prefix), with jittered exponential backoff, deny rules that beat every allowlist, and a never-throwing JSONL audit ledger.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "tests"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "check": "node --check index.js",
+    "test": "node --test tests/tool-retry.test.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.19.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "plugin",
+    "retry",
+    "backoff",
+    "mcp",
+    "tool-call"
+  ],
+  "author": "cailv",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
